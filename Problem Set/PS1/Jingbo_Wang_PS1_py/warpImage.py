@@ -2,9 +2,8 @@ import numpy as np
 from progressBar import progress
 
 def warpImage(inputIm, refIm, H):
-    print "warping images..."
     # define how big to set the big frame to fit everything
-    print "defining bounding frame"
+    # print "defining bounding frame"
     corners = np.array([[0, inputIm.shape[1] - 1, 0, inputIm.shape[1] - 1], [0, 0, inputIm.shape[0] - 1, inputIm.shape[0] - 1], [1, 1, 1, 1]])
     newCorners = np.matmul(H, corners)
     widthrange = np.array([min(newCorners[0]/newCorners[2]), max(newCorners[0]/newCorners[2])])
@@ -19,11 +18,11 @@ def warpImage(inputIm, refIm, H):
         (max((heightrange[1] + y_offset).astype(int), ref_y), max((widthrange[1] + x_offset).astype(int), ref_x), 3))
 
     # inverse warping the inputIm into the big frame
-    print "inverse warping"
+    # print "inverse warping"
     HInverse = np.linalg.inv(H)
     for i in range(bigFrame.shape[0]):
         for j in range(bigFrame.shape[1]):
-            progress((i * bigFrame.shape[1]) + j, bigFrame.shape[0] * bigFrame.shape[1], status="inverse warping")
+            # progress((i * bigFrame.shape[1]) + j, bigFrame.shape[0] * bigFrame.shape[1], status="inverse warping")
             # i -> y value, j -> x value
             curCoord = np.array([[j, i, 1]]).transpose()
             curCoord[0][0] -= x_offset
@@ -40,23 +39,23 @@ def warpImage(inputIm, refIm, H):
                             a * b * inputIm[xj + 1][xi + 1]) + ((1 - a) * b * inputIm[xj + 1][xi])
                 bigFrame[i][j] = rgb
 
-    # crop bigFrame for warpIm
-    print "\ncropping reference frame"
+    # crop bigFrame for warpIm in the size of refIm
+    # print "\ncropping reference frame"
     newIm = np.zeros((refIm.shape))
     for i in range(newIm.shape[0]):
         for j in range(newIm.shape[1]):
-            progress((i * newIm.shape[1]) + j, newIm.shape[0] * newIm.shape[1], status="cropping reference frame")
+            # progress((i * newIm.shape[1]) + j, newIm.shape[0] * newIm.shape[1], status="cropping reference frame")
             # i -> y value, j -> x value
             newIm[i][j] = bigFrame[i + y_offset][j + x_offset]
     warpIm = newIm/255
 
     # overlay the second image on the black regions in the big frame
-    print "\noverlaying the second image"
+    # print "\noverlaying the second image"
     for i in range(refIm.shape[0]):
         for j in range(refIm.shape[1]):
             if np.array_equal(bigFrame[i + y_offset][j + x_offset], np.array([0, 0, 0])):
-                progress((i * newIm.shape[1]) + j, newIm.shape[0] * newIm.shape[1], status="overlaying the second image")
+                # progress((i * newIm.shape[1]) + j, newIm.shape[0] * newIm.shape[1], status="overlaying the second image")
                 bigFrame[i + y_offset][j + x_offset] = refIm[i][j]
     mergeIm = bigFrame / 255
-    print "\n"
+    # print "\n"
     return (warpIm, mergeIm)

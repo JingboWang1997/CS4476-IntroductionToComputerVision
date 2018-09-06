@@ -65,6 +65,6 @@ points = np.load('./selectPoints_Frame.npy')
 points1 = points[:, 0]
 points2 = points[:, 1]
 H = computeH(points1, points2)
-warpIm, mergeIm = warpImage(input, ref, H)
+warped, mergeIm = warpImage(input, ref, H)
 plt.imshow(mergeIm)
 plt.show()

@@ -3,7 +3,6 @@ import numpy as np
 # t1, t2 are 2xN matrices
 # t1 = p, t2 = p' (t2 = H x t1)
 def computeH(t1, t2):
-    print "computing homography matrix"
     # construct L matrix
     L = np.zeros((t1.shape[1]*2, 9))
     for i in range(t1.shape[1]):
