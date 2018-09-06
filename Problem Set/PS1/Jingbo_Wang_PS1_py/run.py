@@ -66,7 +66,7 @@ ref = mpimg.imread('./frame.jpg')
 points = np.load('./selectPoints_Frame.npy')
 points1 = points[:, 0]
 points2 = points[:, 1]
-H = computeH(points2, points1)
+H = computeH(points1, points2)
 warpIm, mergeIm = warpImage(input, ref, H)
 plt.imshow(warpIm)
 plt.show()

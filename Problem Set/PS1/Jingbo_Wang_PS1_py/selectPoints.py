@@ -27,8 +27,8 @@ def onclick2(event):
     # np.save('./points2', points2.transpose())
 
 # specify the 2 images to select corresponding points from
-img1 = './dorm1.jpg'
-img2 = './dorm2.jpg'
+img1 = './'
+img2 = './'
 
 pts1 = []
 pts2 = []
