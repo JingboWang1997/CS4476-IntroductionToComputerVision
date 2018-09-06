@@ -55,8 +55,6 @@ points1 = points[:, 0]
 points2 = points[:, 1]
 H = computeH(points1, points2)
 warpIm, mergeIm = warpImage(input, ref, H)
-plt.imshow(warpIm)
-plt.show()
 plt.imshow(mergeIm)
 plt.show()
 
@@ -68,7 +66,5 @@ points1 = points[:, 0]
 points2 = points[:, 1]
 H = computeH(points1, points2)
 warpIm, mergeIm = warpImage(input, ref, H)
-plt.imshow(warpIm)
-plt.show()
 plt.imshow(mergeIm)
 plt.show()

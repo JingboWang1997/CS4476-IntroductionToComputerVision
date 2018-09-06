@@ -58,5 +58,8 @@ print "points2: ", points2
 print "points1 on first column and points2 on second column:"
 print points
 
-np.save('./selectPoints.npy', points)
-print "saved to a file named 'selectPoints.npy'"
+# save the selected points in a file
+# name = 'selectPoints.npy'
+# url = './' + name
+# np.save(url, points)
+# print "saved to a file named: ", name

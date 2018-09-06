@@ -19,11 +19,11 @@ def warpImage(inputIm, refIm, H):
         (max((heightrange[1] + y_offset).astype(int), ref_y), max((widthrange[1] + x_offset).astype(int), ref_x), 3))
 
     # inverse warping the inputIm into the big frame
+    print "inverse warping"
     HInverse = np.linalg.inv(H)
     for i in range(bigFrame.shape[0]):
         for j in range(bigFrame.shape[1]):
             progress((i * bigFrame.shape[1]) + j, bigFrame.shape[0] * bigFrame.shape[1], status="inverse warping")
-            print "\n"
             # i -> y value, j -> x value
             curCoord = np.array([[j, i, 1]]).transpose()
             curCoord[0][0] -= x_offset
@@ -41,21 +41,22 @@ def warpImage(inputIm, refIm, H):
                 bigFrame[i][j] = rgb
 
     # crop bigFrame for warpIm
+    print "\ncropping reference frame"
     newIm = np.zeros((refIm.shape))
     for i in range(newIm.shape[0]):
         for j in range(newIm.shape[1]):
             progress((i * newIm.shape[1]) + j, newIm.shape[0] * newIm.shape[1], status="cropping reference frame")
-            print "\n"
             # i -> y value, j -> x value
             newIm[i][j] = bigFrame[i + y_offset][j + x_offset]
     warpIm = newIm/255
 
-    # overlay the second image on the black region
+    # overlay the second image on the black regions in the big frame
+    print "\noverlaying the second image"
     for i in range(refIm.shape[0]):
         for j in range(refIm.shape[1]):
             if np.array_equal(bigFrame[i + y_offset][j + x_offset], np.array([0, 0, 0])):
                 progress((i * newIm.shape[1]) + j, newIm.shape[0] * newIm.shape[1], status="overlaying the second image")
-                print "\n"
                 bigFrame[i + y_offset][j + x_offset] = refIm[i][j]
     mergeIm = bigFrame / 255
+    print "\n"
     return (warpIm, mergeIm)
