@@ -3,11 +3,7 @@ import numpy as np
 # t1, t2 are 2xN matrices
 # t1 = p, t2 = p' (t2 = H x t1)
 def computeH(t1, t2):
-    # scale down to [0, 2]
-    # maximum = max(t1.max(), t2.max())
-    # t1 = (t1/maximum) * 2
-    # t2 = (t2/maximum) * 2
-
+    print "computing homography matrix"
     # construct L matrix
     L = np.zeros((t1.shape[1]*2, 9))
     for i in range(t1.shape[1]):
