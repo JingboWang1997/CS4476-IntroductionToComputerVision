@@ -56,7 +56,7 @@ points = np.array([[points1[0], points2[0]], [points1[1], points2[1]]])
 # print "points1: ", points1
 # print "points2: ", points2
 # print "points1 on first column and points2 on second column:"
-# print points
+print points
 
 # save the selected points in a file
 # name = 'selectPoints.npy'
