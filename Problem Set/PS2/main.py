@@ -15,16 +15,19 @@ img = mpimg.imread('./inputSeamCarvingPrague.jpg')
 
 ### energyImage
 energyImage = energy_image(img)
-# plt.imshow(energyImage, cmap=plt.get_cmap('gray'))
-# plt.show()
+plt.imshow(energyImage, cmap=plt.get_cmap('gray'))
+# plt.savefig('./energyImagePrague.png')
+plt.show()
 
 ### cumulative energy map
 mapV = cumulative_minimum_energy_map(energyImage, "VERTICAL")
 mapH = cumulative_minimum_energy_map(energyImage, "HORIZONTAL")
-# plt.imshow(mapV, cmap=plt.get_cmap('gray'))
-# plt.show()
-# plt.imshow(mapH, cmap=plt.get_cmap('gray'))
-# plt.show()
+plt.imshow(mapV, cmap=plt.get_cmap('gray'))
+# plt.savefig('./verticalCumulativeEnergyMapPrague.png')
+plt.show()
+plt.imshow(mapH, cmap=plt.get_cmap('gray'))
+# plt.savefig('./horizontalCumulativeEnergyMapPrague.png')
+plt.show()
 
 ### vertical seam
 vSeam = find_optimal_vertical_seam(mapV)
@@ -33,8 +36,8 @@ vSeam = find_optimal_vertical_seam(mapV)
 hSeam = find_optimal_horizontal_seam(mapH)
 
 ### display seam
-# displaySeam(img, vSeam, "VERTICAL")
-# displaySeam(img, hSeam, "HORIZONTAL")
+displaySeam(img, vSeam, "VERTICAL")
+displaySeam(img, hSeam, "HORIZONTAL")
 
 ### reduced width
 [reducedColorImage1, reducedEnergyImage1] = reduceWidth(img, energyImage)
