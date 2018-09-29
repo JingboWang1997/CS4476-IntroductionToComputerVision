@@ -1,7 +1,7 @@
 from energy_image import energy_image
 from cumulative_minimum_energy_map import cumulative_minimum_energy_map
-from find_optimal_vertical_seam import find_optimal_vertical_seam
-from reduceWidth import reduceWidth
+from find_optimal_horizontal_seam import find_optimal_horizontal_seam
+from reduceHeight import reduceHeight
 from progressBar import progress
 
 import matplotlib.pyplot as plt
@@ -16,9 +16,9 @@ originalEnergyPrague = energyImagePrague.copy()
 originalImagePrague = imgPrague.copy()
 
 for i in xrange(100):
-    progress(i, 100, status="reducing prague image width by 100")
+    progress(i, 100, status="reducing prague image height by 100")
     ### reduce width
-    [imgPrague, energyImagePrague] = reduceWidth(imgPrague, energyImagePrague)
+    [imgPrague, energyImagePrague] = reduceHeight(imgPrague, energyImagePrague)
 
 plt.imshow(originalEnergyPrague, cmap="gray")
 plt.show()
@@ -40,7 +40,7 @@ originalImageMall = imgMall.copy()
 for i in xrange(100):
     progress(i, 100, status="reducing mall image width by 100")
     ### reduce width
-    [imgMall, energyImageMall] = reduceWidth(imgMall, energyImageMall)
+    [imgMall, energyImageMall] = reduceHeight(imgMall, energyImageMall)
 
 plt.imshow(originalEnergyMall, cmap="gray")
 plt.show()
