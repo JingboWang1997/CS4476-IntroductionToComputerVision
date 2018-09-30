@@ -50,3 +50,5 @@ displaySeam(img, hSeam, "HORIZONTAL")
 # plt.show()
 # plt.imshow(reducedColorImage2)
 # plt.show()
+
+

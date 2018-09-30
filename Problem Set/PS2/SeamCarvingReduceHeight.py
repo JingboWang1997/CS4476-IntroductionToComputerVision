@@ -15,6 +15,7 @@ for i in xrange(100):
 print imgPrague.shape
 plt.imshow(imgPrague)
 # plt.savefig('./outputReduceHeightPrague.png')
+plt.show()
 
 ### mall image
 imgMall = mpimg.imread('./inputSeamCarvingMall.jpg')
@@ -27,3 +28,4 @@ for i in xrange(100):
 print imgMall.shape
 plt.imshow(imgMall)
 # plt.savefig('./outputReduceHeightMall.png')
+plt.show()
