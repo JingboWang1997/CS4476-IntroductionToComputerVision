@@ -1,61 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1883e592-1ca9-45e7-ad5c-3f47af7fdcb9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/increaseWidthAndHeight.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SeamCarvingReduceHeight.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SeamCarvingReduceWidth.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cumulative_minimum_energy_map.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/displaySeam.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/energy_image.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/find_optimal_horizontal_seam.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/find_optimal_vertical_seam.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/greedySolution.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inputSeamCarvingMall.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inputSeamCarvingPrague.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modified_energy_function.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/bts/12w15hAltResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/bts/12w15hHVResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/bts/12w15hNormalResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/bts/12w15hVHResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/bts/15w12NormalResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/bts/15w12hAltResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/bts/15w12hHVResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/bts/15w12hVHResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/bts/original.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/face.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/face/12w15hAltResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/face/12w15hHVResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/face/12w15hNormalResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/face/12w15hVHResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/face/15w12NormalResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/face/15w12hAltResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/face/15w12hHVResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/face/15w12hVHResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/face/original.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/group.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/landmark.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/landmark/12w15hAltResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/landmark/12w15hHVResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/landmark/12w15hNormalResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/landmark/12w15hVHResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/landmark/15w12NormalResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/landmark/15w12hAltResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/landmark/15w12hHVResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/landmark/15w12hVHResize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/more images/landmark/original.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/otherImages.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputReduceHeightMall.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputReduceHeightPrague.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputReduceWidthMall.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputReduceWidthPrague.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/progressBar.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reduceHeight.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reduceWidth.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/worksheet.pages" beforeDir="false" afterPath="$PROJECT_DIR$/worksheet.pages" afterDir="false" />
-    </list>
+    <list default="true" id="1883e592-1ca9-45e7-ad5c-3f47af7fdcb9" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +12,7 @@
     <session id="1646887992">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
@@ -338,12 +284,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24947146" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.32048193" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.32048193" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="3" />
