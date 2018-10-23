@@ -31,7 +31,7 @@ errorRGB = computeQuantizationError(fishImg, outputImgRGB)
 print 'Error in RGB Space (k = 30): ', errorRGB
 
 # hsv
-outputImgHSV, meanHues = quantizeHSV(fishImg, smallK)
+outputImgHSV, meanHues = quantizeHSV(fishImg, 5)
 plt.imshow(outputImgHSV)
 plt.title("Color Quantization in HSV (k = 3)")
 plt.show()

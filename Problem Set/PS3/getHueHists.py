@@ -52,4 +52,8 @@ def getHueHists(im, k):
     plt.title("Hue Clustered Bin Histogram (with k = " + str(k) + ")")
     plt.show(histClustered)
 
-    return histEqual, histClustered
+    # get histogram to return
+    histEqualReturn = np.histogram(hueSpace, k)
+    histClusteredReturn = np.histogram(hueSpace, bins=edges)
+
+    return histEqualReturn, histClusteredReturn

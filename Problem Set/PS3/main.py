@@ -2,6 +2,7 @@ from quantizeRGB import quantizeRGB
 from quantizeHSV import quantizeHSV
 from computeQuantizationError import computeQuantizationError
 from getHueHists import getHueHists
+from detectCircles import detectCircles
 
 import matplotlib.pyplot as plt
 
@@ -26,6 +27,14 @@ fishImg = plt.imread('./fish.jpg')
 # print 'error: ', error
 
 # d
-histEqual, histClustered = getHueHists(fishImg, 3)
-plt.show(histEqual)
-plt.show(histClustered)
+# histEqual, histClustered = getHueHists(fishImg, 3)
+# print histEqual
+# plt.show(histEqual)
+# plt.show(histClustered)
+
+img = plt.imread('./egg.jpg')
+radius = 5
+centers = detectCircles(img, radius, 1)
+print centers
+centers = detectCircles(img, radius, 0)
+print centers
