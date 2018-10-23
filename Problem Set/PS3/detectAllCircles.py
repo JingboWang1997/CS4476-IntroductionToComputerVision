@@ -19,13 +19,13 @@ def detectAllCircles(im):
     for i in xrange(cannyImage.shape[0]): #row, y
         for j in xrange(cannyImage.shape[1]): #column, x
             # upper left corner is (0,0), (x,y)
-            progress((i * cannyImage.shape[0]) + j,
-                     cannyImage.shape[0] * cannyImage.shape[1] * 360 * accumulatorArrays.shape[2], status="1")
+            # progress((i * cannyImage.shape[1]) + j, cannyImage.shape[0] * cannyImage.shape[1], status="1")
             x = j
             y = i
             if cannyImage[i][j] == True:
                 for theta in xrange(360):
-                    for radius in xrange(1, accumulatorArrays.shape[2]):
+                    for radius in xrange(accumulatorArrays.shape[2]):
+                        progress(((i * cannyImage.shape[1] * 360 * accumulatorArrays.shape[2]) + (j * 360 * accumulatorArrays.shape[2]) + (theta * accumulatorArrays.shape[2]) + radius), cannyImage.shape[0] * cannyImage.shape[1] * 360 * accumulatorArrays.shape[2], status="1")
                         a = int(round(x - (radius * math.cos(theta * (math.pi / 180)))))
                         b = int(round(y + (radius * math.sin(theta * (math.pi / 180)))))
                         if a >= 0 and a < accumulatorArrays.shape[1] and b >= 0 and b < accumulatorArrays.shape[0] and radius >= 0 and radius < accumulatorArrays.shape[2]:

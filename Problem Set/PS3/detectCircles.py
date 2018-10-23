@@ -65,7 +65,7 @@ def detectCircles(im, radius, useGradient):
                         accumulatorArrays[b][a] += 1
 
     # limiting the vote in a bin
-    binSize = 1
+    binSize = 5
     threshold = 0.9
     y_axis = accumulatorArrays.shape[0] / binSize
     x_axis = accumulatorArrays.shape[1] / binSize
@@ -88,7 +88,7 @@ def detectCircles(im, radius, useGradient):
     return centers
 
     # sum up the values in a bin, if selected as center, put the coordinate as the center of bin
-    # binSize = 1
+    # binSize = 5
     # threshold = 0.9
     # y_axis = accumulatorArrays.shape[0] / binSize
     # x_axis = accumulatorArrays.shape[1] / binSize
@@ -98,7 +98,6 @@ def detectCircles(im, radius, useGradient):
     #     for x in xrange(x_axis):
     #         # scope for each bin
     #         scope = accumulatorArrays[y * binSize: (y * binSize) + binSize, x * binSize: (x * binSize) + binSize]
-    #         winner = scope.max()
     #         quantizedArrays[y][x] = scope.sum()
     # maximum = quantizedArrays.max()
     # thresholdValue = threshold * maximum
