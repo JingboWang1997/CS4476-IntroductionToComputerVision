@@ -97,7 +97,7 @@ for i in range(1):
     pl.imshow(im)
     MyROI = roipoly(roicolor='r')
     Ind = MyROI.getIdx(im, mat['positions'])
-    
+
     # Ind contains the indices of the SIFT features whose centers fall
     # within the selected region of interest.
     # Note that these indices apply to the *rows* of 'descriptors' and
@@ -121,7 +121,7 @@ for i in range(1):
     
     # extract the image patch
 
-    patch_num = 1
+    patch_num = 21
     img_patch = getPatchFromSIFTParameters(mat['positions'][patch_num,:], mat['scales'][patch_num], mat['orients'][patch_num], rgb2gray(im))
 
     plt.imshow(img_patch,  cmap = cm.Greys_r)

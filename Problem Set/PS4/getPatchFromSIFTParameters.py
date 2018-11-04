@@ -43,7 +43,7 @@ def getPatchFromSIFTParameters(position, scale, orient, im):
 	points = np.vstack((y, x)).T
 	
 	ROIpath = mplPath.Path(poly_verts)
-   	grid = ROIpath.contains_points(points).reshape((ny,nx))
+	grid = ROIpath.contains_points(points).reshape((ny,nx))
 
 	y_loc = [m[0] for m in poly_verts]
 	x_loc = [m[1] for m in poly_verts]
@@ -51,10 +51,10 @@ def getPatchFromSIFTParameters(position, scale, orient, im):
 	xmin, xmax = np.min(x_loc), np.max(x_loc)
 	ymin, ymax = np.min(y_loc), np.max(y_loc)
 
-	xmin = np.max([xmin, 0])
-	xmax = np.min([xmax, im.shape[1]])
-	ymin = np.max([ymin, 0])
-	ymax = np.min([ymax, im.shape[0]])
+	xmin = int(np.max([xmin, 0]))
+	xmax = int(np.min([xmax, im.shape[1]]))
+	ymin = int(np.max([ymin, 0]))
+	ymax = int(np.min([ymax, im.shape[0]]))
 
 	grid = grid[ymin:ymax, xmin:xmax]
 	im = im[ymin:ymax, xmin:xmax]
